@@ -2,45 +2,11 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-main-page-message-in-maincard-to-clearly-reflect-the-context-she-left-after-the-first-date-saying-this-isn-t-working-out-and-the-message-is-simply-asking-her-to-please-come-back-and-give-it-another-chance-the-tone-must-be-sweet-hopeful-and-sincere-centered-on-please-come-back-without-any-framing-of-messing-up-mistakes-or-apologies-remove-any-language-that-implies-a-longer-relationship-or-wrongdoing",
-      "featureTitle": "Update the main page message in MainCard to clearly reflect the context: she left after the first date saying 'this isn't working out', and the message is simply asking her to please come back and give it another chance. The tone must be sweet, hopeful, and sincere — centered on 'please come back 🥺' — without any framing of messing up, mistakes, or apologies. Remove any language that implies a longer relationship or wrongdoing.",
+      "featureId": "feature-remove-every-instance-of-the-emoji-from-all-text-in-the-frontend-including-but-not-limited-to-the-main-page-message-in-app-tsx-maincard-the-you-are-my-patronus-saachi-line-the-yes-button-label-the-celebrationscreen-messages-and-any-quips-or-strings-in-runawaybutton-no-emoji-should-appear-anywhere-in-the-rendered-ui",
+      "featureTitle": "Remove every instance of the 🥺 emoji from all text in the frontend, including but not limited to: the main page message in App.tsx (MainCard), the 'You are my Patronus, Saachi' line, the Yes button label, the CelebrationScreen messages, and any quips or strings in RunawayButton. No 🥺 emoji should appear anywhere in the rendered UI.",
       "files": [
-        "frontend/src/App.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-11"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-celebrationscreen-shown-after-yes-is-clicked-so-its-messaging-aligns-with-the-one-date-context-celebrating-the-prospect-of-a-second-date-not-making-things-right-or-fixing-anything-it-should-feel-joyful-and-forward-looking-e-g-yay-can-t-wait-for-our-next-date",
-      "featureTitle": "Update the CelebrationScreen (shown after 'Yes' is clicked) so its messaging aligns with the one-date context — celebrating the prospect of a second date, not 'making things right' or fixing anything. It should feel joyful and forward-looking, e.g. 'Yay! Can't wait for our next date! 🥺'.",
-      "files": [
-        "frontend/src/components/CelebrationScreen.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-12"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-audit-and-update-all-quips-in-runawaybutton-to-ensure-none-imply-a-relationship-wrongdoing-or-apology-context-all-quips-should-remain-playful-and-witty-consistent-with-the-one-date-scenario",
-      "featureTitle": "Audit and update all quips in RunawayButton to ensure none imply a relationship, wrongdoing, or apology context. All quips should remain playful and witty, consistent with the one-date scenario.",
-      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CelebrationScreen.tsx",
         "frontend/src/components/RunawayButton.tsx"
       ],
       "components": [
@@ -51,7 +17,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-13"
+        "REQ-25"
       ],
       "confidence": "high"
     }

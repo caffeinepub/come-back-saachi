@@ -1,11 +1,18 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
-  "summary": "A playful, emotional webpage asking a girl named Saachi to come back after she left after the first date saying 'this isn't working out'. Harry Potter themed with Slytherin house aesthetic. Features a heartfelt message with 🥺 emoji including the line 'you are my patronus Saachi', a 'Yes' button and a 'No' button that runs away when hovered/clicked and displays random witty quips. Saachi has a nickname 'Windshields' (due to her glasses) which is integrated. The core message is simply asking her to please come back, keeping tone hopeful and sweet without over-explaining.",
+  "projectStateVersion": 27,
+  "summary": "A playful, emotional webpage asking a girl named Saachi to come back. Harry Potter themed with Slytherin house aesthetic. Features a heartfelt message with the line 'you are my patronus Saachi', a 'Yes' button and a 'No' button that runs away when hovered/clicked and displays random witty quips. Saachi has a nickname 'Windshields' (due to her glasses) which is integrated. The core message is asking her to reconnect — lighter and less overwhelming than 'please come back', with a hopeful, sweet tone. The 🥺 emoji has been removed from all text across the app.",
   "architectural_notes": [
-    "Core message focus: simply asking Saachi to please come back with 🥺 emoji — she left after the first date saying 'this isn't working out'. Keep messaging simple and heartfelt, not over-explained."
+    "'You are my Patronus, Saachi 🥺' line must always be present on the main page — do not remove it.",
+    "Do NOT mention 'the date' or any date context in the main page message — the messaging should simply ask Saachi to please come back, nothing more.",
+    "The nickname 'Windshields' must always be paired with an affectionate qualifier (e.g. 'my fav Windshields') — never used alone in a way that could sound rude or insulting.",
+    "The main page message tone should feel light and inviting — avoid heavy 'please come back' phrasing; prefer softer language around reconnecting or a gentle invitation.",
+    "The 🥺 emoji must not appear anywhere in the app — it has been removed from all components and all text."
   ],
-  "known_issues": [],
+  "known_issues": [
+    "'You are my Patronus, Saachi 🥺' line was accidentally removed from the main page in a recent build.",
+    "The intelligence compliment line in MainCard feels unnatural and forced — needs to be rewritten to flow organically within the existing message."
+  ],
   "isFixRequest": false,
   "existing_features": [
     {
@@ -111,6 +118,94 @@
         "REQ-13"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-main-page-message-in-maincard-to-remove-any-mention-of-the-date-first-date-second-date-or-any-date-related-framing-entirely-the-message-should-simply-and-sincerely-ask-saachi-to-come-back-with-a-heartfelt-hopeful-tone-no-contextual-framing-whatsoever-keep-the-emoji-prominent-retain-the-you-are-my-patronus-saachi-line-and-keep-the-windshields-nickname-reference-the-tone-should-be-pure-please-come-back-i-miss-you-sweet-and-direct",
+      "title": "Update the main page message in MainCard to remove any mention of 'the date', 'first date', 'second date', or any date-related framing entirely. The message should simply and sincerely ask Saachi to come back, with a heartfelt, hopeful tone — no contextual framing whatsoever. Keep the 🥺 emoji prominent, retain the 'You are my Patronus, Saachi 🥺' line, and keep the 'Windshields' nickname reference. The tone should be pure 'please come back, I miss you' — sweet and direct.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-celebrationscreen-messaging-to-remove-any-reference-to-dates-a-second-date-or-date-related-framing-the-celebration-should-simply-express-joy-that-saachi-said-yes-to-coming-back-e-g-yay-you-re-coming-back-with-no-mention-of-a-date",
+      "title": "Update the CelebrationScreen messaging to remove any reference to 'dates', 'a second date', or date-related framing. The celebration should simply express joy that Saachi said yes to coming back, e.g. 'Yay! You're coming back! 🥺', with no mention of a date.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-all-quips-in-runawaybutton-and-remove-any-that-reference-dates-dating-or-going-on-a-date-replace-any-removed-quips-with-new-playful-witty-quips-that-are-context-free-and-simply-tease-the-user-for-trying-to-click-no",
+      "title": "Audit all quips in RunawayButton and remove any that reference dates, dating, or 'going on a date'. Replace any removed quips with new playful, witty quips that are context-free and simply tease the user for trying to click No.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-occurrences-of-the-windshields-nickname-in-maincard-main-page-message-to-use-a-cuter-more-affectionate-phrasing-replace-bare-windshields-or-aka-windshields-with-something-warm-and-endearing-such-as-my-fav-windshields-or-my-favourite-windshields-the-nickname-must-never-appear-standalone-or-in-a-way-that-could-read-as-insulting-or-rude-it-should-feel-like-a-term-of-affection",
+      "title": "Update all occurrences of the 'Windshields' nickname in MainCard (main page message) to use a cuter, more affectionate phrasing. Replace bare 'Windshields' or 'aka Windshields' with something warm and endearing such as 'my fav Windshields' or 'my favourite Windshields'. The nickname must never appear standalone or in a way that could read as insulting or rude — it should feel like a term of affection.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-celebrationscreen-so-that-any-occurrence-of-windshields-in-the-celebration-message-e-g-windshields-said-yes-is-replaced-with-a-cuter-affectionate-form-such-as-my-fav-windshields-said-yes-or-my-favourite-windshields-is-coming-back-it-must-not-sound-rude-or-cold",
+      "title": "Update the CelebrationScreen so that any occurrence of 'Windshields' in the celebration message (e.g. 'Windshields said Yes!') is replaced with a cuter affectionate form such as 'my fav Windshields said Yes!' or 'my favourite Windshields is coming back!'. It must not sound rude or cold.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-maincard-component-frontend-src-app-tsx-add-a-warm-sincere-compliment-about-saachi-s-intelligence-brain-to-the-kind-heartfelt-section-of-the-main-page-message-the-compliment-should-feel-genuine-and-personal-e-g-something-like-i-love-how-brilliant-your-mind-is-or-your-intelligence-is-one-of-the-things-i-adore-most-about-you-it-must-fit-naturally-into-the-existing-message-flow-maintain-the-slytherin-harry-potter-magical-tone-and-never-feel-forced-or-out-of-place",
+      "title": "In the MainCard component (frontend/src/App.tsx), add a warm, sincere compliment about Saachi's intelligence/brain to the kind, heartfelt section of the main page message. The compliment should feel genuine and personal — e.g. something like 'I love how brilliant your mind is' or 'your intelligence is one of the things I adore most about you'. It must fit naturally into the existing message flow, maintain the Slytherin/Harry Potter magical tone, and never feel forced or out of place.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-celebrationscreen-component-frontend-src-components-celebrationscreen-tsx-add-a-warm-heartfelt-line-expressing-that-saachi-made-the-sender-the-happiest-e-g-you-made-me-the-happiest-person-in-the-world-or-you-just-made-me-the-happiest-this-line-should-appear-prominently-on-the-celebration-screen-after-the-user-clicks-yes-feel-emotionally-sincere-and-joyful-and-be-consistent-with-the-existing-slytherin-harry-potter-magical-theme-and-typography",
+      "title": "In the CelebrationScreen component (frontend/src/components/CelebrationScreen.tsx), add a warm, heartfelt line expressing that Saachi made the sender the happiest — e.g. 'You made me the happiest person in the world 🥺' or 'You just made me the happiest 🥺'. This line should appear prominently on the celebration screen after the user clicks Yes, feel emotionally sincere and joyful, and be consistent with the existing Slytherin/Harry Potter magical theme and typography.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-maincard-component-frontend-src-app-tsx-rewrite-the-intelligence-compliment-about-saachi-so-it-flows-organically-and-naturally-within-the-existing-message-the-current-line-feels-forced-or-out-of-place-rework-its-wording-and-position-within-the-message-so-it-reads-as-a-seamless-sincere-part-of-the-heartfelt-text-not-an-awkward-addition-the-compliment-should-still-genuinely-praise-her-brilliance-intelligence-maintain-the-slytherin-harry-potter-magical-tone-and-never-feel-tacked-on",
+      "title": "In the MainCard component (frontend/src/App.tsx), rewrite the intelligence compliment about Saachi so it flows organically and naturally within the existing message. The current line feels forced or out of place — rework its wording and position within the message so it reads as a seamless, sincere part of the heartfelt text, not an awkward addition. The compliment should still genuinely praise her brilliance/intelligence, maintain the Slytherin/Harry Potter magical tone, and never feel tacked on.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-maincard-component-frontend-src-app-tsx-find-the-intelligence-compliment-about-saachi-and-replace-the-word-mind-with-intelligence-wherever-it-appears-in-that-compliment-line-for-example-if-the-line-reads-something-like-i-love-how-brilliant-your-mind-is-change-it-to-i-love-how-brilliant-your-intelligence-is-or-equivalent-natural-phrasing-using-intelligence-instead-of-mind-the-line-must-still-read-naturally-and-flow-organically-within-the-existing-message",
+      "title": "In the MainCard component (frontend/src/App.tsx), find the intelligence compliment about Saachi and replace the word 'mind' with 'intelligence' wherever it appears in that compliment line. For example, if the line reads something like 'I love how brilliant your mind is', change it to 'I love how brilliant your intelligence is' (or equivalent natural phrasing using 'intelligence' instead of 'mind'). The line must still read naturally and flow organically within the existing message.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-maincard-component-frontend-src-app-tsx-replace-any-please-come-back-phrasing-in-the-main-page-message-with-a-softer-lighter-invitation-framed-around-reconnecting-or-gently-reaching-out-rather-than-a-heavy-plea-for-example-use-phrasing-like-can-we-reconnect-i-d-love-to-hear-from-you-again-or-maybe-we-could-start-again-the-new-phrasing-must-still-feel-heartfelt-and-sincere-keep-the-emoji-prominent-retain-the-you-are-my-patronus-saachi-line-keep-the-my-fav-windshields-nickname-reference-and-remain-consistent-with-the-slytherin-harry-potter-magical-tone",
+      "title": "In the MainCard component (frontend/src/App.tsx), replace any 'please come back' phrasing in the main page message with a softer, lighter invitation — framed around reconnecting or gently reaching out rather than a heavy plea. For example, use phrasing like 'Can we reconnect? 🥺', 'I'd love to hear from you again 🥺', or 'Maybe we could start again? 🥺'. The new phrasing must still feel heartfelt and sincere, keep the 🥺 emoji prominent, retain the 'You are my Patronus, Saachi 🥺' line, keep the 'my fav Windshields' nickname reference, and remain consistent with the Slytherin/Harry Potter magical tone.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-every-instance-of-the-emoji-from-all-text-in-the-frontend-including-but-not-limited-to-the-main-page-message-in-app-tsx-maincard-the-you-are-my-patronus-saachi-line-the-yes-button-label-the-celebrationscreen-messages-and-any-quips-or-strings-in-runawaybutton-no-emoji-should-appear-anywhere-in-the-rendered-ui",
+      "title": "Remove every instance of the 🥺 emoji from all text in the frontend, including but not limited to: the main page message in App.tsx (MainCard), the 'You are my Patronus, Saachi' line, the Yes button label, the CelebrationScreen messages, and any quips or strings in RunawayButton. No 🥺 emoji should appear anywhere in the rendered UI.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -147,6 +242,56 @@
     {
       "id": "AR-6",
       "summary": "Update messaging to reflect they only went on one date (not a relationship), remove any 'I messed up' or 'made a mistake' framing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Restore the line 'You are my Patronus, Saachi 🥺' to a prominent position in the MainCard component on the main page. It should be integrated naturally into or below the existing heartfelt message, styled to feel magical and emotionally resonant, consistent with the Slytherin/Harry Potter theme.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Remove any mention of 'the date' or date-related context from the main page message. The message should simply ask Saachi to come back with a heartfelt, hopeful tone — no framing around the date at all.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Make the 'Windshields' nickname usage cuter and more affectionate — e.g. 'my fav Windshields' instead of just 'Windshields'. Avoid it sounding insulting or rude in any context (main page intro and celebration screen).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add a compliment about Saachi's intelligence/brain in the kind, warm part of the main page message — she likes being complimented on her intelligence.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "After Saachi clicks Yes, add a message on the CelebrationScreen like 'You made me the happiest' — expressing joy and happiness that she said yes.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Make the intelligence compliment line about Saachi sound more natural and integrated into the main page message flow — it currently feels forced or out of place.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Replace 'please come back' phrasing in the main page message with something lighter and less overwhelming — e.g. framing around reconnecting or a softer invitation rather than a heavy plea.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Remove the 🥺 emoji from all text everywhere in the app (MainCard, CelebrationScreen, RunawayButton quips, and any other components).",
       "reqIds": [],
       "status": "pending"
     }

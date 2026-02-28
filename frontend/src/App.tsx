@@ -66,31 +66,37 @@ function MainCard({ onYes }: { onYes: () => void }) {
       {/* Card */}
       <div className="bg-card-glass backdrop-blur-md rounded-2xl shadow-magical px-8 py-10 flex flex-col items-center gap-6 border border-slytherin w-full animate-glow-pulse">
         {/* Big emoji */}
-        <div className="text-7xl animate-magical-pulse select-none" role="img" aria-label="pleading face">
-          🥺
+        <div className="text-7xl animate-magical-pulse select-none" role="img" aria-label="snake">
+          🐍
         </div>
 
         {/* Heading */}
         <h1 className="font-script text-3xl md:text-4xl text-silver text-center leading-tight tracking-wide text-glow-silver">
-          Saachi, please come back 🥺
+          Saachi, can we reconnect?
         </h1>
 
         {/* Nickname — playful personal touch */}
         <p className="font-body text-sm text-emerald-bright/70 tracking-widest uppercase select-none">
-          aka my Windshields 🤓✨
+          my favourite little Windshields 🤓✨
         </p>
 
-        {/* Main message — sweet, hopeful, one-date framing */}
+        {/* Main message — sweet, heartfelt, no date framing */}
         <div className="text-center space-y-3">
           <p className="font-body text-lg md:text-xl text-silver/90 leading-relaxed italic">
-            I know you said "this isn't working out" — but I really think it could. 🥺
+            I miss you, Saachi. I really, truly do.
           </p>
           <p className="font-body text-base md:text-lg text-silver/75 leading-relaxed">
-            Our first date meant a lot to me. You're funny, warm, and genuinely
-            one of a kind — and I'd love the chance to show you that. 💚
+            You're funny, warm, and genuinely one of a kind — the way your intelligence works,
+            the way you see things, it's one of my favourite things about you. 💚
           </p>
+
+          {/* Patronus line — prominent and magical */}
+          <p className="font-script text-xl md:text-2xl text-emerald-bright font-semibold leading-relaxed tracking-wide animate-magical-pulse">
+            ✨ You are my Patronus, Saachi ✨
+          </p>
+
           <p className="font-body text-lg md:text-xl text-silver font-semibold leading-relaxed">
-            Please give us one more chance? 🥺✨
+            I'd love to hear from you again ✨
           </p>
         </div>
 
@@ -99,7 +105,7 @@ function MainCard({ onYes }: { onYes: () => void }) {
 
         {/* Question */}
         <p className="font-script text-xl text-silver/85 text-center tracking-wide">
-          Will you come back? 🥺
+          Will you come back?
         </p>
 
         {/* Buttons */}
@@ -110,7 +116,7 @@ function MainCard({ onYes }: { onYes: () => void }) {
             className="yes-button group relative px-10 py-4 rounded-lg font-script font-bold text-lg text-white shadow-yes transition-all duration-200 hover:scale-110 hover:shadow-yes-hover active:scale-95 select-none tracking-wider"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Yes! 🥺✨
+              Yes! ✨
             </span>
           </button>
 

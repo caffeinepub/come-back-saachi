@@ -1,45 +1,27 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T12:10:46.460Z",
+  "generatedAt": "2026-02-28T15:52:24.865Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Update the main page message in MainCard to clearly reflect the context: she left after the first date saying 'this isn't working out', and the message is simply asking her to please come back and give it another chance. The tone must be sweet, hopeful, and sincere — centered on 'please come back 🥺' — without any framing of messing up, mistakes, or apologies. Remove any language that implies a longer relationship or wrongdoing.",
+        "id": "REQ-25",
+        "summary": "Remove every instance of the 🥺 emoji from all text in the frontend, including but not limited to: the main page message in App.tsx (MainCard), the 'You are my Patronus, Saachi' line, the Yes button label, the CelebrationScreen messages, and any quips or strings in RunawayButton. No 🥺 emoji should appear anywhere in the rendered UI.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-12",
-        "summary": "Update the CelebrationScreen (shown after 'Yes' is clicked) so its messaging aligns with the one-date context — celebrating the prospect of a second date, not 'making things right' or fixing anything. It should feel joyful and forward-looking, e.g. 'Yay! Can't wait for our next date! 🥺'.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/CelebrationScreen.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/CelebrationScreen.tsx"
-        ]
-      },
-      {
-        "id": "REQ-13",
-        "summary": "Audit and update all quips in RunawayButton to ensure none imply a relationship, wrongdoing, or apology context. All quips should remain playful and witty, consistent with the one-date scenario.",
-        "status": "implemented",
-        "plannedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/CelebrationScreen.tsx",
           "frontend/src/components/RunawayButton.tsx"
         ],
         "matchedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/CelebrationScreen.tsx",
           "frontend/src/components/RunawayButton.tsx"
         ]
       }

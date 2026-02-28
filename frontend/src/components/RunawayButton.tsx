@@ -15,12 +15,12 @@ const QUIPS = [
   "This button has trust issues! 😅",
   "404: No not found! 🚫",
   "Expecto Patronum... nope! 🐍",
-  "Date two awaits — say yes! ⚡",
   "Even Windshields can't resist! 🤓✨",
   "The sorting hat says YES! 🎩",
-  "Accio second date! 🧹",
-  "One more chance — you know you want to! 🥺",
-  "Come on, Saachi! 🥺💚",
+  "One more chance — you know you want to! 🌟",
+  "Come on, Saachi! 💚",
+  "Resistance is futile, Windshields! 🌟",
+  "The Marauder's Map says: say yes! 🗺️",
 ];
 
 function getRandomQuip(current: string): string {

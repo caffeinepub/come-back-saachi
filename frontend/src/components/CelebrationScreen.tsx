@@ -55,10 +55,15 @@ export default function CelebrationScreen() {
   const [confetti] = useState<Confetti[]>(() => generateConfetti(60));
   const [particles] = useState<FloatingParticle[]>(() => generateFloatingParticles(15));
   const [showMessage, setShowMessage] = useState(false);
+  const [showHappiest, setShowHappiest] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setShowMessage(true), 300);
-    return () => clearTimeout(t);
+    const t1 = setTimeout(() => setShowMessage(true), 300);
+    const t2 = setTimeout(() => setShowHappiest(true), 1100);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
 
   return (
@@ -113,25 +118,41 @@ export default function CelebrationScreen() {
         <div className="text-5xl animate-bounce-gentle select-none">🐍</div>
 
         <h1 className="font-script text-3xl md:text-4xl text-silver text-center leading-tight tracking-wide text-glow-silver">
-          She's coming back! 🥺✨
+          She's coming back! ✨
         </h1>
 
-        {/* Windshields greeting */}
+        {/* Windshields greeting — affectionate */}
         <p className="font-body text-sm text-emerald-bright/70 tracking-widest uppercase select-none">
-          Windshields said yes! 🤓💚
+          my fav Windshields said yes! 🤓💚
         </p>
 
         <div className="text-center space-y-3">
           <p className="font-body text-xl text-silver font-semibold">
-            Yay! Can't wait for our second date! 🥺
+            Yay! You're coming back! 💚
           </p>
           <p className="font-body text-base text-silver/80 leading-relaxed italic">
-            So glad you gave us another chance, Saachi.
-            This is going to be so much fun. ✨💚
+            So happy you said yes, Saachi.
+            This is going to be so magical. ✨💚
           </p>
           <p className="font-body text-lg text-silver/90 font-medium">
-            Date two is going to be magical. 🌟
+            Can't wait to see you again. 🌟
           </p>
+        </div>
+
+        {/* "You made me the happiest" — heartfelt highlight */}
+        <div
+          className={`w-full transition-all duration-700 ease-out ${
+            showHappiest ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
+          }`}
+        >
+          <div className="relative rounded-xl border border-emerald-hp/50 bg-emerald-hp/10 px-6 py-4 text-center shadow-magical">
+            <p className="font-script text-2xl md:text-3xl text-silver text-glow-silver leading-snug">
+              You just made me the happiest person in the world
+            </p>
+            <p className="mt-2 font-body text-sm text-emerald-bright/80 italic">
+              Truly, Saachi. No one else could. 💚
+            </p>
+          </div>
         </div>
 
         {/* Magical symbols row */}
