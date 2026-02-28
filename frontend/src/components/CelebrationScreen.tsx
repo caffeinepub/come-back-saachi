@@ -1,0 +1,152 @@
+import { useEffect, useState } from 'react';
+
+interface Confetti {
+  id: number;
+  x: number;
+  color: string;
+  size: number;
+  delay: number;
+  duration: number;
+  rotation: number;
+}
+
+interface FloatingParticle {
+  id: number;
+  x: number;
+  size: number;
+  delay: number;
+  duration: number;
+  emoji: string;
+}
+
+// Slytherin confetti: emerald greens and silvers
+const CONFETTI_COLORS = [
+  '#2d6a4f', '#40916c', '#52b788', '#74c69d',
+  '#b7c9c0', '#d4e0db', '#a8c5bc', '#1b4332',
+  '#95d5b2', '#c8e6c9',
+];
+
+const CELEBRATION_EMOJIS = ['✨', '🌟', '💫', '⭐', '🐍', '💚', '🔮', '⚡'];
+
+function generateConfetti(count: number): Confetti[] {
+  return Array.from({ length: count }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
+    size: 6 + Math.random() * 10,
+    delay: Math.random() * 2,
+    duration: 2.5 + Math.random() * 2,
+    rotation: Math.random() * 360,
+  }));
+}
+
+function generateFloatingParticles(count: number): FloatingParticle[] {
+  return Array.from({ length: count }, (_, i) => ({
+    id: i,
+    x: 5 + Math.random() * 90,
+    size: 18 + Math.random() * 28,
+    delay: Math.random() * 3,
+    duration: 3 + Math.random() * 3,
+    emoji: CELEBRATION_EMOJIS[Math.floor(Math.random() * CELEBRATION_EMOJIS.length)],
+  }));
+}
+
+export default function CelebrationScreen() {
+  const [confetti] = useState<Confetti[]>(() => generateConfetti(60));
+  const [particles] = useState<FloatingParticle[]>(() => generateFloatingParticles(15));
+  const [showMessage, setShowMessage] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setShowMessage(true), 300);
+    return () => clearTimeout(t);
+  }, []);
+
+  return (
+    <div className="relative flex flex-col items-center justify-center min-h-[60vh] w-full">
+      {/* Confetti */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-20">
+        {confetti.map((c) => (
+          <div
+            key={c.id}
+            className="absolute animate-confetti-fall"
+            style={{
+              left: `${c.x}%`,
+              top: '-20px',
+              width: c.size,
+              height: c.size,
+              backgroundColor: c.color,
+              borderRadius: Math.random() > 0.5 ? '50%' : '2px',
+              animationDelay: `${c.delay}s`,
+              animationDuration: `${c.duration}s`,
+              transform: `rotate(${c.rotation}deg)`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating magical particles */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-20">
+        {particles.map((p) => (
+          <div
+            key={p.id}
+            className="absolute animate-heart-rise"
+            style={{
+              left: `${p.x}%`,
+              bottom: '-60px',
+              fontSize: p.size,
+              animationDelay: `${p.delay}s`,
+              animationDuration: `${p.duration}s`,
+            }}
+          >
+            {p.emoji}
+          </div>
+        ))}
+      </div>
+
+      {/* Main celebration card */}
+      <div
+        className={`relative z-30 bg-card-glass backdrop-blur-md rounded-2xl shadow-magical px-8 py-12 flex flex-col items-center gap-6 border border-slytherin max-w-md w-full transition-all duration-700 ${
+          showMessage ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
+        }`}
+      >
+        {/* Slytherin snake */}
+        <div className="text-5xl animate-bounce-gentle select-none">🐍</div>
+
+        <h1 className="font-script text-3xl md:text-4xl text-silver text-center leading-tight tracking-wide text-glow-silver">
+          She's coming back! 🥺✨
+        </h1>
+
+        {/* Windshields greeting */}
+        <p className="font-body text-sm text-emerald-bright/70 tracking-widest uppercase select-none">
+          Windshields said yes! 🤓💚
+        </p>
+
+        <div className="text-center space-y-3">
+          <p className="font-body text-xl text-silver font-semibold">
+            Yay! Can't wait for our second date! 🥺
+          </p>
+          <p className="font-body text-base text-silver/80 leading-relaxed italic">
+            So glad you gave us another chance, Saachi.
+            This is going to be so much fun. ✨💚
+          </p>
+          <p className="font-body text-lg text-silver/90 font-medium">
+            Date two is going to be magical. 🌟
+          </p>
+        </div>
+
+        {/* Magical symbols row */}
+        <div className="flex gap-3 text-2xl animate-pulse-gentle select-none">
+          {['🐍', '✨', '💚', '🌟', '⚡', '🔮'].map((emoji, i) => (
+            <span key={i} style={{ animationDelay: `${i * 0.15}s` }}>{emoji}</span>
+          ))}
+        </div>
+
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-emerald-hp to-transparent" />
+
+        <p className="font-script text-xl text-silver/80 text-center tracking-wide">
+          Always ✦ Slytherin & Slytherin 🐍
+        </p>
+      </div>
+    </div>
+  );
+}

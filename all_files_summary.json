@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Minimal Motoko backend actor with no methods or state defined.",
+  "feature_evidence.json": "Feature evidence report mapping three UI update features (MainCard message, CelebrationScreen messaging, RunawayButton quips) to their affected files and test IDs.",
+  "frontend-file-summaries.txt": "JSON document summarizing the purpose and current state of each frontend source file in the project.",
+  "frontend/index.css": "Global CSS entry point that imports Tailwind layers and defines OKLCH-based CSS custom properties for light and dark themes including colors, borders, and chart tokens.",
+  "frontend/index.html": "HTML shell with the page title 'Come Back Saachi' and a root div that mounts the React app via main.tsx.",
+  "frontend/src/App.tsx": "Root React component rendering a Slytherin-themed page with a floating particles background, a MainCard asking Saachi for a second date, and a CelebrationScreen shown after clicking Yes.",
+  "frontend/src/components/CelebrationScreen.tsx": "Celebration screen displayed after the user clicks Yes, featuring Slytherin-colored confetti, floating magical emoji particles, and joyful messaging about a second date with Saachi.",
+  "frontend/src/components/FloatingHearts.tsx": "Background decoration component that renders 22 randomly positioned Harry Potter-themed emoji particles floating upward with varied speeds and opacities.",
+  "frontend/src/components/RunawayButton.tsx": "A 'No' button that runs away on hover or touch, displaying 20 playful Harry Potter-themed quips consistent with a one-date scenario.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor using React Query, supporting both anonymous and authenticated (Internet Identity) usage.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication on the ICP blockchain, managing login state, identity persistence, and AuthClient lifecycle.",
+  "frontend/src/index.css": "Global CSS file defining a Slytherin/Harry Potter dark magical theme with emerald and silver OKLCH color tokens, Cinzel/Crimson Text fonts, Tailwind layers, and keyframe animations.",
+  "frontend/src/main.tsx": "React app entry point that mounts the root component wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with Slytherin-themed color tokens, custom fonts, border radii, box shadows, and accordion animations.",
+  "project_state.json": "Project state metadata describing a Harry Potter/Slytherin-themed webpage asking a girl named Saachi to come back, featuring a heartfelt message, a runaway 'No' button with witty quips, and a celebratory 'Yes' response screen."
+}

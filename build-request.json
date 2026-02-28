@@ -1,0 +1,82 @@
+{
+  "kind": "build_request",
+  "title": "Clarify messaging: she left after one date, tone is 'please come back' not apologetic",
+  "projectName": "Come Back Saachi",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Update the main page message in MainCard to clearly reflect the context: she left after the first date saying 'this isn't working out', and the message is simply asking her to please come back and give it another chance. The tone must be sweet, hopeful, and sincere — centered on 'please come back 🥺' — without any framing of messing up, mistakes, or apologies. Remove any language that implies a longer relationship or wrongdoing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "she left me after the first date saying this isn't working out",
+          "we are making this to ask her to please come back with 🥺 emoji that's it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The main page message prominently features the 🥺 emoji",
+        "The message asks Saachi to please come back after their first date",
+        "There is no language implying a longer relationship, a mistake, or an apology",
+        "The tone is sweet, hopeful, and sincere throughout",
+        "The Slytherin/Harry Potter visual theme remains consistent"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Update the CelebrationScreen (shown after 'Yes' is clicked) so its messaging aligns with the one-date context — celebrating the prospect of a second date, not 'making things right' or fixing anything. It should feel joyful and forward-looking, e.g. 'Yay! Can't wait for our next date! 🥺'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "we are making this to ask her to please come back with 🥺 emoji that's it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "CelebrationScreen does not contain any language about making things right or fixing a mistake",
+        "CelebrationScreen messaging is forward-looking and joyful, referencing a second date",
+        "The 🥺 emoji is present in the celebration message",
+        "Slytherin/Harry Potter visual theme is preserved"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Audit and update all quips in RunawayButton to ensure none imply a relationship, wrongdoing, or apology context. All quips should remain playful and witty, consistent with the one-date scenario.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "we are making this to ask her to please come back with 🥺 emoji that's it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No quip implies a relationship, past mistake, or apology",
+        "All quips remain playful, witty, and light in tone",
+        "At least 10 quips are present in the predefined list",
+        "The No button still runs away on hover/click with quips displayed"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter any immutable frontend paths (useInternetIdentity, useActor, main.tsx, ui components)",
+    "Preserve the Slytherin/Harry Potter visual theme across all components",
+    "Do not change the backend"
+  ],
+  "nonGoals": [
+    "Adding new features beyond messaging correction",
+    "Changing the visual theme or layout",
+    "Modifying the No-button run-away mechanics",
+    "Adding new images or backgrounds"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main app component with Slytherin background, floating particles, and a MainCard centered on \"Saachi, please come back 🥺\" — referencing the one-date context where she said \"this isn't working out\" and sweetly asking for one more chance, with no apologetic or relationship framing.",
+  "frontend/src/components/RunawayButton.tsx": "Runaway \"No\" button with 20 Harry Potter-themed quips; all quips are playful and witty with no implication of a relationship, mistake, or apology — two new quips added (\"One more chance — you know you want to! 🥺\" and \"Come on, Saachi! 🥺💚\").",
+  "frontend/src/components/CelebrationScreen.tsx": "Celebration screen with Slytherin confetti and floating particles; messaging is forward-looking and joyful, celebrating that she said yes to a second date with lines like \"Yay! Can't wait for our second date! 🥺\" and greeting Saachi as \"Windshields.\"",
+  "frontend/src/components/FloatingHearts.tsx": "Background decoration component (renamed internally) that renders 22 randomly positioned magical Harry Potter emojis (✨⭐💫🌟🐍⚡🔮💚) floating upward with varied speeds and opacities.",
+  "frontend/src/index.css": "Global styles with a Slytherin/Harry Potter OKLCH color palette (deep emerald greens, silver, dark charcoal), Cinzel and Crimson Text Google Fonts, and all custom keyframe animations including magical-pulse, glow-pulse, shimmer-silver, and the existing float/confetti/quip animations.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Slytherin color tokens (emerald-hp, emerald-bright, silver, silver-dim, dark-stone), Cinzel/Crimson Text font families, and magical shadow utilities replacing the previous romantic palette."
+}
