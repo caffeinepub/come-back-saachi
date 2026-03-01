@@ -1,14 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Remove all instances of the 🥺 emoji from every text string in the frontend UI.
+**Goal:** Restore the "You made me the happiest" line in the CelebrationScreen to its original prominent, heartfelt form.
 
 **Planned changes:**
-- Remove the 🥺 emoji from the main page message in App.tsx / MainCard
-- Remove the 🥺 emoji from the "You are my Patronus, Saachi" line
-- Remove the 🥺 emoji from the Yes button label
-- Remove the 🥺 emoji from all CelebrationScreen messages
-- Remove the 🥺 emoji from all quips in RunawayButton
-- Remove the 🥺 emoji from any other string literals in the frontend
+- Restore the "You made me the happiest" line in `CelebrationScreen.tsx` to a strong, sincere phrasing (e.g. "You made me the happiest person in the world" or "You just made me the happiest")
+- Ensure the line is styled prominently and consistently with the existing Slytherin/Harry Potter magical theme and typography
+- Remove any 🥺 emoji from the CelebrationScreen if present
 
-**User-visible outcome:** The app displays identically except the 🥺 emoji no longer appears anywhere in the UI; all other text, styling, and functionality remains unchanged.
+**User-visible outcome:** After clicking Yes, the celebration screen displays a prominent, emotionally sincere "You made me the happiest" message with no softened phrasing and no 🥺 emoji.

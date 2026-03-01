@@ -118,7 +118,7 @@ export default function CelebrationScreen() {
         <div className="text-5xl animate-bounce-gentle select-none">🐍</div>
 
         <h1 className="font-script text-3xl md:text-4xl text-silver text-center leading-tight tracking-wide text-glow-silver">
-          She's coming back! ✨
+          Yay, we're talking again! ✨
         </h1>
 
         {/* Windshields greeting — affectionate */}
@@ -128,18 +128,17 @@ export default function CelebrationScreen() {
 
         <div className="text-center space-y-3">
           <p className="font-body text-xl text-silver font-semibold">
-            Yay! You're coming back! 💚
+            This honestly made my day 💚
           </p>
           <p className="font-body text-base text-silver/80 leading-relaxed italic">
-            So happy you said yes, Saachi.
-            This is going to be so magical. ✨💚
+            Glad we're good, Saachi. That's all I needed. ✨
           </p>
           <p className="font-body text-lg text-silver/90 font-medium">
-            Can't wait to see you again. 🌟
+            Looking forward to it 🌟
           </p>
         </div>
 
-        {/* "You made me the happiest" — heartfelt highlight */}
+        {/* Happiest highlight box — restored */}
         <div
           className={`w-full transition-all duration-700 ease-out ${
             showHappiest ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
@@ -147,10 +146,10 @@ export default function CelebrationScreen() {
         >
           <div className="relative rounded-xl border border-emerald-hp/50 bg-emerald-hp/10 px-6 py-4 text-center shadow-magical">
             <p className="font-script text-2xl md:text-3xl text-silver text-glow-silver leading-snug">
-              You just made me the happiest person in the world
+              You made me the happiest person in the world ✨
             </p>
             <p className="mt-2 font-body text-sm text-emerald-bright/80 italic">
-              Truly, Saachi. No one else could. 💚
+              Truly, Saachi. Thank you. 💚
             </p>
           </div>
         </div>

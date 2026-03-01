@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 27,
+  "projectStateVersion": 33,
   "summary": "A playful, emotional webpage asking a girl named Saachi to come back. Harry Potter themed with Slytherin house aesthetic. Features a heartfelt message with the line 'you are my patronus Saachi', a 'Yes' button and a 'No' button that runs away when hovered/clicked and displays random witty quips. Saachi has a nickname 'Windshields' (due to her glasses) which is integrated. The core message is asking her to reconnect — lighter and less overwhelming than 'please come back', with a hopeful, sweet tone. The 🥺 emoji has been removed from all text across the app.",
   "architectural_notes": [
     "'You are my Patronus, Saachi 🥺' line must always be present on the main page — do not remove it.",
@@ -206,6 +206,30 @@
         "REQ-25"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-in-the-maincard-component-frontend-src-app-tsx-find-the-current-reconnect-invitation-line-the-line-asking-saachi-to-reconnect-come-back-will-you-come-back-phrasing-and-replace-it-with-the-exact-text-so-we-on-talking-terms-now-the-new-line-must-be-displayed-prominently-in-the-main-message-styled-consistently-with-the-existing-slytherin-harry-potter-magical-theme-and-typography-and-must-not-include-the-emoji",
+      "title": "In the MainCard component (frontend/src/App.tsx), find the current reconnect invitation line (the line asking Saachi to reconnect / come back / 'will you come back' phrasing) and replace it with the exact text: 'So we….on talking terms now 🙂'. The new line must be displayed prominently in the main message, styled consistently with the existing Slytherin/Harry Potter magical theme and typography, and must not include the 🥺 emoji.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-celebrationscreen-component-frontend-src-components-celebrationscreen-tsx-update-all-messaging-to-use-lighter-softer-more-casual-and-joyful-phrasing-remove-or-replace-any-heavy-come-back-or-overly-earnest-plea-style-language-the-tone-should-feel-warm-relieved-and-happily-forward-looking-something-like-yay-we-re-talking-again-or-this-made-my-day-or-similar-light-and-genuine-expressions-retain-the-you-made-me-the-happiest-sentiment-if-present-but-express-it-in-a-lighter-less-intense-way-keep-the-messaging-consistent-with-the-slytherin-harry-potter-magical-theme-and-do-not-include-the-emoji",
+      "title": "In the CelebrationScreen component (frontend/src/components/CelebrationScreen.tsx), update all messaging to use lighter, softer, more casual and joyful phrasing. Remove or replace any heavy 'come back' or overly earnest plea-style language. The tone should feel warm, relieved, and happily forward-looking — something like 'Yay, we're talking again!' or 'This made my day :)' or similar light and genuine expressions. Retain the 'You made me the happiest' sentiment if present but express it in a lighter, less intense way. Keep the messaging consistent with the Slytherin/Harry Potter magical theme and do not include the 🥺 emoji.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-celebrationscreen-component-frontend-src-components-celebrationscreen-tsx-restore-the-you-made-me-the-happiest-line-to-its-original-prominent-emotionally-sincere-form-the-previous-build-softened-or-removed-this-line-revert-that-change-so-it-reads-as-a-strong-heartfelt-expression-of-happiness-e-g-you-made-me-the-happiest-person-in-the-world-or-you-just-made-me-the-happiest-the-line-must-appear-prominently-on-the-celebration-screen-feel-genuinely-joyful-and-sincere-and-remain-consistent-with-the-slytherin-harry-potter-magical-theme-and-typography-do-not-include-the-emoji",
+      "title": "In the CelebrationScreen component (frontend/src/components/CelebrationScreen.tsx), restore the 'You made me the happiest' line to its original prominent, emotionally sincere form. The previous build softened or removed this line — revert that change so it reads as a strong, heartfelt expression of happiness (e.g. 'You made me the happiest person in the world' or 'You just made me the happiest'). The line must appear prominently on the celebration screen, feel genuinely joyful and sincere, and remain consistent with the Slytherin/Harry Potter magical theme and typography. Do not include the 🥺 emoji.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -292,6 +316,18 @@
     {
       "id": "AR-14",
       "summary": "Remove the 🥺 emoji from all text everywhere in the app (MainCard, CelebrationScreen, RunawayButton quips, and any other components).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Change the main page 'will you come back' / reconnect invitation line to 'So we….on talking terms now 🙂'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Revert CelebrationScreen changes — keep 'You made me the happiest' text as it was, do not remove or soften it.",
       "reqIds": [],
       "status": "pending"
     }

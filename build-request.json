@@ -1,39 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Remove 🥺 emoji from all text everywhere in the app",
+  "title": "Restore 'You made me the happiest' text in CelebrationScreen",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-25",
-      "text": "Remove every instance of the 🥺 emoji from all text in the frontend, including but not limited to: the main page message in App.tsx (MainCard), the 'You are my Patronus, Saachi' line, the Yes button label, the CelebrationScreen messages, and any quips or strings in RunawayButton. No 🥺 emoji should appear anywhere in the rendered UI.",
+      "id": "REQ-28",
+      "text": "In the CelebrationScreen component (frontend/src/components/CelebrationScreen.tsx), restore the 'You made me the happiest' line to its original prominent, emotionally sincere form. The previous build softened or removed this line — revert that change so it reads as a strong, heartfelt expression of happiness (e.g. 'You made me the happiest person in the world' or 'You just made me the happiest'). The line must appear prominently on the celebration screen, feel genuinely joyful and sincere, and remain consistent with the Slytherin/Harry Potter magical theme and typography. Do not include the 🥺 emoji.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "msg-4"
         ],
         "quotes": [
-          "Remove the 🥺 emoji everywhere"
+          "Nah keep the you made me the happiest text why change that"
         ]
       },
       "acceptanceCriteria": [
-        "The 🥺 emoji does not appear anywhere in the main page message (MainCard / App.tsx).",
-        "The 'You are my Patronus, Saachi' line no longer contains the 🥺 emoji.",
-        "The Yes button label contains no 🥺 emoji.",
-        "All messages and lines on the CelebrationScreen contain no 🥺 emoji.",
-        "All quips in RunawayButton contain no 🥺 emoji.",
-        "No other component or string literal in the frontend contains the 🥺 emoji.",
-        "All other text, styling, and functionality remains unchanged."
+        "The CelebrationScreen displays a prominent line expressing 'You made me the happiest' (or equivalent strong phrasing) after the user clicks Yes.",
+        "The line is not softened, diluted, or replaced with lighter casual phrasing.",
+        "The line is styled consistently with the existing Slytherin/Harry Potter magical theme and typography.",
+        "No 🥺 emoji appears in the line or anywhere else on the CelebrationScreen.",
+        "All other CelebrationScreen content and styling remains unchanged."
       ]
     }
   ],
   "constraints": [
-    "Only remove the 🥺 emoji; do not alter any other text, styling, or logic.",
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui."
+    "Do not alter any other messaging or styling on the CelebrationScreen beyond restoring the 'You made me the happiest' line.",
+    "Do not reintroduce the 🥺 emoji anywhere in the component.",
+    "Do not modify any immutable frontend paths."
   ],
   "nonGoals": [
-    "Changing any wording, phrasing, or messaging beyond removing the 🥺 emoji.",
-    "Removing any other emojis (e.g. ✨, ⚡, 🐍) that are part of the Harry Potter / Slytherin theme.",
-    "Any backend changes."
+    "Changing any other component (MainCard, RunawayButton, FloatingHearts).",
+    "Updating the backend.",
+    "Altering the Slytherin/Harry Potter visual theme.",
+    "Making any other messaging changes to the CelebrationScreen beyond restoring this one line."
   ],
   "imageRequirements": {
     "required": [],

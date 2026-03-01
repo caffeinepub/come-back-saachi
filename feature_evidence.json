@@ -2,12 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-every-instance-of-the-emoji-from-all-text-in-the-frontend-including-but-not-limited-to-the-main-page-message-in-app-tsx-maincard-the-you-are-my-patronus-saachi-line-the-yes-button-label-the-celebrationscreen-messages-and-any-quips-or-strings-in-runawaybutton-no-emoji-should-appear-anywhere-in-the-rendered-ui",
-      "featureTitle": "Remove every instance of the 🥺 emoji from all text in the frontend, including but not limited to: the main page message in App.tsx (MainCard), the 'You are my Patronus, Saachi' line, the Yes button label, the CelebrationScreen messages, and any quips or strings in RunawayButton. No 🥺 emoji should appear anywhere in the rendered UI.",
+      "featureId": "feature-in-the-celebrationscreen-component-frontend-src-components-celebrationscreen-tsx-restore-the-you-made-me-the-happiest-line-to-its-original-prominent-emotionally-sincere-form-the-previous-build-softened-or-removed-this-line-revert-that-change-so-it-reads-as-a-strong-heartfelt-expression-of-happiness-e-g-you-made-me-the-happiest-person-in-the-world-or-you-just-made-me-the-happiest-the-line-must-appear-prominently-on-the-celebration-screen-feel-genuinely-joyful-and-sincere-and-remain-consistent-with-the-slytherin-harry-potter-magical-theme-and-typography-do-not-include-the-emoji",
+      "featureTitle": "In the CelebrationScreen component (frontend/src/components/CelebrationScreen.tsx), restore the 'You made me the happiest' line to its original prominent, emotionally sincere form. The previous build softened or removed this line — revert that change so it reads as a strong, heartfelt expression of happiness (e.g. 'You made me the happiest person in the world' or 'You just made me the happiest'). The line must appear prominently on the celebration screen, feel genuinely joyful and sincere, and remain consistent with the Slytherin/Harry Potter magical theme and typography. Do not include the 🥺 emoji.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/CelebrationScreen.tsx",
-        "frontend/src/components/RunawayButton.tsx"
+        "frontend/src/components/CelebrationScreen.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-25"
+        "REQ-28"
       ],
       "confidence": "high"
     }

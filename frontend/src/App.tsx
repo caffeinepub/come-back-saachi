@@ -105,7 +105,7 @@ function MainCard({ onYes }: { onYes: () => void }) {
 
         {/* Question */}
         <p className="font-script text-xl text-silver/85 text-center tracking-wide">
-          Will you come back?
+          So we….on talking terms now 🙂
         </p>
 
         {/* Buttons */}
