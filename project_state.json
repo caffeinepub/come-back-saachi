@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 33,
+  "projectStateVersion": 35,
   "summary": "A playful, emotional webpage asking a girl named Saachi to come back. Harry Potter themed with Slytherin house aesthetic. Features a heartfelt message with the line 'you are my patronus Saachi', a 'Yes' button and a 'No' button that runs away when hovered/clicked and displays random witty quips. Saachi has a nickname 'Windshields' (due to her glasses) which is integrated. The core message is asking her to reconnect — lighter and less overwhelming than 'please come back', with a hopeful, sweet tone. The 🥺 emoji has been removed from all text across the app.",
   "architectural_notes": [
     "'You are my Patronus, Saachi 🥺' line must always be present on the main page — do not remove it.",
@@ -329,6 +329,20 @@
       "id": "AR-17",
       "summary": "Revert CelebrationScreen changes — keep 'You made me the happiest' text as it was, do not remove or soften it.",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Change the ending text from 'always dithering and slytherin' to 'ravenclaw and slytherin for life'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "In the MainCard component (frontend/src/App.tsx), find the ending text that currently reads 'always dithering and slytherin' and replace it with the exact text: 'ravenclaw and slytherin for life'. The new text must be styled consistently with the existing Slytherin/Harry Potter magical theme and typography.",
+      "reqIds": [
+        "REQ-29"
+      ],
       "status": "pending"
     }
   ],

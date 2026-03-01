@@ -1,11 +1,27 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-03-01T03:13:28.798Z",
-  "summary": "The diff modifies CelebrationScreen.tsx to restore the 'You made me the happiest person in the world ✨' line with heartfelt phrasing and proper Slytherin/Harry Potter styling, without the 🥺 emoji. The implementation appears to satisfy REQ-28 fully.",
+  "generatedAt": "2026-03-01T03:19:15.273Z",
+  "summary": "The diff implements the text change from 'always dithering and slytherin' to 'ravenclaw and slytherin for life' as required by REQ-29. The file summary for App.tsx does not mention the old text, and CelebrationScreen.tsx ends with 'Ravenclaw and Slytherin for life 🐍'. However, CelebrationScreen.tsx and RunawayButton.tsx were both modified, violating explicit non-goals and constraints in the build request.",
   "missing_requirements": [],
-  "hallucinated_features": [],
-  "confidence": 0.92,
+  "hallucinated_features": [
+    {
+      "description": "CelebrationScreen.tsx was modified despite the explicit non-goal of not modifying CelebrationScreen.",
+      "reason": "The build request states 'Modifying CelebrationScreen or RunawayButton' is a non-goal, yet CelebrationScreen.tsx appears in the list of modified files.",
+      "evidence": [
+        "frontend/src/components/CelebrationScreen.tsx"
+      ]
+    },
+    {
+      "description": "RunawayButton.tsx was modified with 🥺 emojis removed from quips and replaced with 🌟 and 💚, violating the constraint against adding or removing the 🥺 emoji and the non-goal against modifying RunawayButton.",
+      "reason": "The build request explicitly states 'Do not add or remove the 🥺 emoji' and 'Modifying CelebrationScreen or RunawayButton' is a non-goal, yet the file summary confirms 🥺 emojis were removed from RunawayButton quips.",
+      "evidence": [
+        "frontend/src/components/RunawayButton.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "confidence": 0.82,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/CelebrationScreen.tsx",

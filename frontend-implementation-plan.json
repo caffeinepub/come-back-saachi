@@ -1,23 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Restore 'You made me the happiest' text in CelebrationScreen",
+  "title": "Change ending text from 'always dithering and slytherin' to 'ravenclaw and slytherin for life'",
   "requirements": [
     {
-      "id": "REQ-28",
-      "summary": "Restore the 'You made me the happiest' line to its original prominent, emotionally sincere form in the CelebrationScreen component",
+      "id": "REQ-29",
+      "summary": "Replace ending text 'always dithering and slytherin' with 'ravenclaw and slytherin for life' in the MainCard component",
       "acceptanceCriteria": [
-        "The CelebrationScreen displays a prominent line expressing 'You made me the happiest' (or equivalent strong phrasing) after the user clicks Yes.",
-        "The line is not softened, diluted, or replaced with lighter casual phrasing.",
-        "The line is styled consistently with the existing Slytherin/Harry Potter magical theme and typography.",
-        "No 🥺 emoji appears in the line or anywhere else on the CelebrationScreen.",
-        "All other CelebrationScreen content and styling remains unchanged."
+        "The text 'always dithering and slytherin' no longer appears anywhere in the rendered UI.",
+        "The text 'ravenclaw and slytherin for life' appears at the end of the main page message in its place.",
+        "The new text is styled consistently with the existing Slytherin/Harry Potter magical theme and typography.",
+        "No other text or layout is changed."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/CelebrationScreen.tsx",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Restore the 'You made me the happiest' line to its original prominent, heartfelt form (e.g., 'You made me the happiest person in the world' or 'You just made me the happiest'). Replace the current lighter casual messaging ('Yay, we're talking again!') with this strong, emotionally sincere expression. Ensure the line is prominently displayed, uses consistent Slytherin/Harry Potter magical theme typography (Cinzel or Crimson Text), and remains free of the 🥺 emoji. Preserve all other content, confetti effects, floating magical emoji particles, and styling unchanged."
+          "description": "Locate the MainCard component rendering the ending text 'always dithering and slytherin' and replace it with the exact text 'ravenclaw and slytherin for life'. Preserve all existing styling, className attributes, and typography. Do not modify the 🥺 emoji or any other text content. Ensure the replacement text maintains consistent formatting with the Slytherin/Harry Potter magical theme."
         }
       ]
     }

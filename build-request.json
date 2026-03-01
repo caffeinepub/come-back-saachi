@@ -1,39 +1,37 @@
 {
   "kind": "build_request",
-  "title": "Restore 'You made me the happiest' text in CelebrationScreen",
+  "title": "Change ending text from 'always dithering and slytherin' to 'ravenclaw and slytherin for life'",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-28",
-      "text": "In the CelebrationScreen component (frontend/src/components/CelebrationScreen.tsx), restore the 'You made me the happiest' line to its original prominent, emotionally sincere form. The previous build softened or removed this line — revert that change so it reads as a strong, heartfelt expression of happiness (e.g. 'You made me the happiest person in the world' or 'You just made me the happiest'). The line must appear prominently on the celebration screen, feel genuinely joyful and sincere, and remain consistent with the Slytherin/Harry Potter magical theme and typography. Do not include the 🥺 emoji.",
+      "id": "REQ-29",
+      "text": "In the MainCard component (frontend/src/App.tsx), find the ending text that currently reads 'always dithering and slytherin' and replace it with the exact text: 'ravenclaw and slytherin for life'. The new text must be styled consistently with the existing Slytherin/Harry Potter magical theme and typography.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Nah keep the you made me the happiest text why change that"
+          "At the end instead of always dithering and slytherin change it to ravenclaw and slytherin for life"
         ]
       },
       "acceptanceCriteria": [
-        "The CelebrationScreen displays a prominent line expressing 'You made me the happiest' (or equivalent strong phrasing) after the user clicks Yes.",
-        "The line is not softened, diluted, or replaced with lighter casual phrasing.",
-        "The line is styled consistently with the existing Slytherin/Harry Potter magical theme and typography.",
-        "No 🥺 emoji appears in the line or anywhere else on the CelebrationScreen.",
-        "All other CelebrationScreen content and styling remains unchanged."
+        "The text 'always dithering and slytherin' no longer appears anywhere in the rendered UI.",
+        "The text 'ravenclaw and slytherin for life' appears at the end of the main page message in its place.",
+        "The new text is styled consistently with the existing Slytherin/Harry Potter magical theme and typography.",
+        "No other text or layout is changed."
       ]
     }
   ],
   "constraints": [
-    "Do not alter any other messaging or styling on the CelebrationScreen beyond restoring the 'You made me the happiest' line.",
-    "Do not reintroduce the 🥺 emoji anywhere in the component.",
+    "Do not change any other text or messaging outside of the specific 'always dithering and slytherin' line.",
+    "Do not add or remove the 🥺 emoji.",
     "Do not modify any immutable frontend paths."
   ],
   "nonGoals": [
-    "Changing any other component (MainCard, RunawayButton, FloatingHearts).",
-    "Updating the backend.",
-    "Altering the Slytherin/Harry Potter visual theme.",
-    "Making any other messaging changes to the CelebrationScreen beyond restoring this one line."
+    "Changing the visual theme or color palette.",
+    "Modifying CelebrationScreen or RunawayButton.",
+    "Any backend changes."
   ],
   "imageRequirements": {
     "required": [],

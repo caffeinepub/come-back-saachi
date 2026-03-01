@@ -1,11 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Restore the "You made me the happiest" line in the CelebrationScreen to its original prominent, heartfelt form.
+**Goal:** Update the ending text in the MainCard component to read "ravenclaw and slytherin for life" instead of "always dithering and slytherin".
 
 **Planned changes:**
-- Restore the "You made me the happiest" line in `CelebrationScreen.tsx` to a strong, sincere phrasing (e.g. "You made me the happiest person in the world" or "You just made me the happiest")
-- Ensure the line is styled prominently and consistently with the existing Slytherin/Harry Potter magical theme and typography
-- Remove any 🥺 emoji from the CelebrationScreen if present
+- Replace the text "always dithering and slytherin" with "ravenclaw and slytherin for life" in the MainCard component in `frontend/src/App.tsx`
 
-**User-visible outcome:** After clicking Yes, the celebration screen displays a prominent, emotionally sincere "You made me the happiest" message with no softened phrasing and no 🥺 emoji.
+**User-visible outcome:** The main page message now ends with "ravenclaw and slytherin for life" instead of the previous text, styled consistently with the existing Harry Potter/Slytherin theme.

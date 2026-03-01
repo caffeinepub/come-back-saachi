@@ -164,7 +164,7 @@ export default function CelebrationScreen() {
         <div className="w-24 h-px bg-gradient-to-r from-transparent via-emerald-hp to-transparent" />
 
         <p className="font-script text-xl text-silver/80 text-center tracking-wide">
-          Always ✦ Slytherin & Slytherin 🐍
+          Ravenclaw and Slytherin for life 🐍
         </p>
       </div>
     </div>
